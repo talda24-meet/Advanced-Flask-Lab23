@@ -57,6 +57,11 @@
 		box-sizing: border-box;
 	}
 
+.size{
+	width: 200px;
+	height: 200px;
+}
+
 /* Grid */
 
 	.row {

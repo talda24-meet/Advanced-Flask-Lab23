@@ -13,7 +13,7 @@ image_link = "https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de254f85
 
 user_bio = "Middle East Entrepreneurs of Tomorrow. Enabling the next generation of Israeli and Palestinian leaders."
 
-posts = {
+my_posts = {
     "https://imageio.forbes.com/blogs-images/samarmarwan/files/2018/03/MEET-Students-1200x800.jpg": "Group projects <3",
     "https://uploads-ssl.webflow.com/5dd64bd3a930f96c82bd137a/63024ce64d943673cb004a4c_2022.07.17%20-%20Summer%20Day%201.png": "MEET summer!",
     "https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de6d502d6d70c0ad49a060c_6.jpg": "#MEET_DU",
@@ -25,8 +25,7 @@ posts = {
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html')
-
+    return render_template('index.html', image=image_link, bio=user_bio, posts=my_posts)
 
 @app.route('/about')  # '/' for the default page
 def about():
